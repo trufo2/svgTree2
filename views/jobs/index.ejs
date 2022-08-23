@@ -1,0 +1,21 @@
+<h2>Rechercher un job</h2>
+<form action="/jobs" method="get">
+  <div>
+    <label>titre</label>
+    <input type="text" name="title" value="<%= searchOptions.title %>">
+  </div>
+  <div>
+    <label>publié après</label>
+    <input type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">
+  </div>
+  <div>
+    <label>publié avant</label>
+    <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
+  </div>
+  <button type="submit">Chercher</button>
+</form>
+<div>
+  <% jobs.forEach(job => { %>
+    <img height="150" width="100" src="<%= job.svgsPath %>">
+  <% }) %>
+</div>

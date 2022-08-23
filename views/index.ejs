@@ -1,1 +1,6 @@
-accueil
+<h2 class="page-header">Jobs récents</h2>
+<div>
+  <% jobs.forEach(job => { %>
+    <img height="150" width="100" src="<%= job.svgsPath %>">
+  <% }) %>
+</div>
